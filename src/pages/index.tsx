@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { SubscribeButton } from '../components/SubscribeButton';
 
 import styles from './home.module.scss'
+import Image from 'next/image';
 
 interface HomeProps {
   product:{
@@ -27,7 +28,12 @@ export default function Home({ product }: HomeProps) {
           </p>
           <SubscribeButton priceId={product.priceId}/>
         </section>
-        <img src="/images/avatar.svg" alt="Girl codding" />     
+        <Image 
+          src="/images/avatar.svg" 
+          alt="Girl codding" 
+          width={336} 
+          height={521} 
+        />     
       </main>
     </>
   )
