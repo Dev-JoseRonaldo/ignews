@@ -1,11 +1,7 @@
 import { useSession, signIn } from 'next-auth/react'
 import styles from './styles.module.scss'
 
-interface SubscribeButtonProps {
-  priceId: string,
-}
-
-export const SubscribeButton = ({ priceId }: SubscribeButtonProps) => {
+export const SubscribeButton = () => {
   const { data: session } = useSession()
 
   function handleSubscribe() {
